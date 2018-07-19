@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Menu, Responsive, Image, Segment } from 'semantic-ui-react';
+import { Container, Menu, Responsive, Image, Segment, Button, Icon} from 'semantic-ui-react';
 import './App.css';
 import logo from './navaanavai.svg';
 import { FullPage, Slide } from 'react-full-page';
@@ -8,26 +8,35 @@ import { FullPage, Slide } from 'react-full-page';
 const menuItems = [
   { key: 'home', active: true, name: "Home" },
   { key: 'faq', name: "FAQ" },
-  { key: 'contact', name: "Contact" },
+  // { key: 'contact', name: "Contact" },
 ]
 
-const menu = () => {
-  <Responsive as={Menu} inverted color={'red'} items={menuItems} fluid />
+var mainPage = () => {
+  return(
+    <Responsive as={Container} className="main" >
+      <Responsive as={Menu} inverted color={'red'} items={menuItems} fluid />              
+      <Image className='logo' src={logo} centered />
+      <Button color='twitter'>
+        <Icon name='twitter' /> Twitter
+      </Button>
+      <Button color='facebook'>
+        <Icon name='facebook' /> Facebook
+      </Button>
+    </Responsive>
+  );
 }
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <FullPage>
-          <Slide>
-            <Responsive as={Container} className="main" fluid >
-              <Image className='logo' src={logo} centered />
-            </Responsive>
+        <FullPage duration={1000}>
+          <Slide className='dark'>
+            {mainPage()}
           </Slide>
-          <Slide>
-            <Responsive as={Container} className='faq' fluid>
-              <Segment vertical secondary inverted color={'red'} as='h1'>Who are we?</Segment>
+          <Slide className='light'>
+            <Responsive as={Container} className='faq'>
+              <Segment>Who are we?</Segment>
             </Responsive>
           </Slide>
         </FullPage>
