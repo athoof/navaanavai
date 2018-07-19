@@ -1,5 +1,19 @@
 .main {
   background: rgb(44, 41, 41);
-  height: 100vh;
+  height: 94.5vh;
 }
 
+.logo {
+  top: 24vh;
+  margin: auto;
+}
+
+p {
+  text-align: center;
+}
+
+.faq {
+  background: indianred;
+  height: 94.5vh;
+  
+}
