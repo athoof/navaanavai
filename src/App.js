@@ -1,35 +1,32 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Menu, Responsive, Image, Segment, Button, Icon, Card, Divider} from 'semantic-ui-react';
+import { Button, Container, Image, Menu, Responsive } from 'semantic-ui-react';
 import './App.css';
-import logo from './navaanavai.svg';
-import { FullPage, Slide } from 'react-full-page';
-// import faq from './faq.md';
+import logosvg from './navaanavai.svg';
 
-const menuItems = [
+/* const menuItems = [
   { key: 'home', active: true, name: "Home" },
   { key: 'faq', name: "FAQ" },
-  // { key: 'contact', name: "Contact" },
 ]
 
 var topMenu = () => {
   return(
     <Responsive as={Menu} inverted color={'red'} items={menuItems} fluid />
   )
-}
+} */
 
-var mainPage = () => {
+var logo = () => {
   return(
-    <Image className='logo' src={logo} centered />
+    <Image className='logo' src={logosvg} centered />
   );
 }
 
 var socialButtons = () => {
   return(
     <Responsive as={Container} className='buttonGroup' centered fluid >
-        <Button className='socialButtons' circular color='facebook' icon='facebook' />
-        <Button className='socialButtons' circular color='twitter' icon='twitter' />
-        <Button className='socialButtons' circular color='google plus' icon='mail' />
+        <Button href='https://web.facebook.com/navaanavai' className='socialButtons' circular color='facebook' icon='facebook' />
+        <Button href='https://twitter.com/navaanavai' className='socialButtons' circular color='twitter' icon='twitter' />
+        <Button href='mailto:navaanavai@gmail.com' className='socialButtons' circular color='google plus' icon='mail' />
     </Responsive>
   )
 }
@@ -37,8 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="main dark">
-          {mainPage()}
-          <Divider clearing inverted />
+          {logo()}
           {socialButtons()}
       </div>
     );
