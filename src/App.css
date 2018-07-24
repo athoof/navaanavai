@@ -10,17 +10,28 @@
   /* background: rgb(44, 41, 41); */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: stretch;
   justify-items: center;
   height: 100vh;
   margin: 0 auto;
-  padding: 15vh 15vw;
+  /* padding: 15vh 15vw; */
+}
+
+.ui.menu {
+  background-image: url('./navaanavai.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.Home {
+  display: flex;
+  align-content: flex-end;
 }
 
 .logo {
   margin: auto;
-  align-content: center;
-  bottom: 10vh;
+  /* bottom: 10vh; */
 }
 
 .buttonSet {
