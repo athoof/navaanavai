@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Container, Image, Menu, Responsive, Card } from 'semantic-ui-react';
+import { Button, Container, Image, Menu, Responsive, Accordion } from 'semantic-ui-react';
 import './App.css';
-import logosvg from './navaanavai.svg';
-import { Switch } from 'react-router-dom';
 import faqText from './faq.json';
+import logosvg from './navaanavai.svg';
 
 const menuItems = [
-  { key: 'home', active: true, name: "Home" },
-  { key: 'faq', name: "FAQ", href: '/faq' },
+  { key: 'home', active: true, name: "Home", href: '#' },
+  { key: 'faq', name: "FAQ", href: '#faq' },
 ]
 
 var topMenu = () => {
@@ -45,13 +44,22 @@ const Home = () => {
 
 const FaqText = () => {
   //function to loop json and create semantic-ui Accordion panels 
+  var resultSet = [];
+  faqText.forEach((qna, i) => {
+    qna.answer.replace(/\n/g, "n\\\\").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t");//can't put newlines in JSON with RTL thaana
+    let result = {
+      key: i,
+      title: qna.question,
+      content: qna.answer
+    }
+    resultSet.push(result)
+  });
+  return(resultSet);
 }
 
 const Faq = () => {
   return(
-    <Container className="Faq">
-      {FaqText}
-    </Container>
+    <Accordion dir="rtl" className='thaana' styled fluid defaultActiveIndex={0} panels={FaqText()} />
   );
 }
 

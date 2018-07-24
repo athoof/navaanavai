@@ -48,8 +48,9 @@
 }
 
 .thaana {
-  direction: rtl;
-  font-size: 1.8em;
+  /* direction: rtl; */
+  font-size: 4vh;
+  line-height: 1.8em;
 }
 /* 
 .bottom {
