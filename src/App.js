@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Container, Image, Menu, Responsive, Accordion } from 'semantic-ui-react';
+import { Button, Container, Image, Menu, Responsive, Accordion, Label, List, Message, Card } from 'semantic-ui-react';
 import './App.css';
 import faqText from './faq.json';
 import logosvg from './navaanavai.svg';
 
 const menuItems = [
-  { key: 'home', active: true, name: "Home", href: '#' },
+  { key: 'home', name: "Home", href: '#', inverted: true},
   { key: 'faq', name: "FAQ", href: '#faq' },
 ]
 
 var topMenu = () => {
   return(
-    <Responsive as={Menu} className="topMenu" color={'red'} items={menuItems} fluid />
+    <Menu className="topMenu" color={'red'} items={menuItems} fluid fixed='top' pointing floated />
   )
 }
 
@@ -42,15 +42,25 @@ const Home = () => {
   );
 }
 
+//function to loop json and create semantic-ui Accordion panels 
 const FaqText = () => {
-  //function to loop json and create semantic-ui Accordion panels 
   var resultSet = [];
   faqText.forEach((qna, i) => {
-    qna.answer.replace(/\n/g, "n\\\\").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t");//can't put newlines in JSON with RTL thaana
+    // qna.answer.replace(/\n/g, "n\\\\").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t");//can't put newlines in JSON with RTL thaana
+    let answer = qna.answer;
+    // qna.answer.forEach((line) => {
+    //   answer = answer ? answer + '\n' + line : line;
+    // })
+    if (qna.multiline) {
+      answer = <List items={qna.answer} />
+    }
     let result = {
       key: i,
-      title: qna.question,
-      content: qna.answer
+      header: qna.question,
+      description: answer,
+      color: 'red',
+      inverted: true,
+      raised: true,
     }
     resultSet.push(result)
   });
@@ -59,7 +69,7 @@ const FaqText = () => {
 
 const Faq = () => {
   return(
-    <Accordion dir="rtl" className='thaana' styled fluid defaultActiveIndex={0} panels={FaqText()} />
+    <Card.Group dir='rtl' className='thaana faq' itemsPerRow={1} color={'red'} items={FaqText()} />
   );
 }
 
@@ -68,10 +78,12 @@ class App extends Component {
     return (
       <div className="main">
       {topMenu()}
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/faq' component={Faq} />
-        </Switch>
+        <Container fluid style={{ marginTop: '7em' }}>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/faq' component={Faq} />
+          </Switch>
+        </Container>
       </div>
     );
   }

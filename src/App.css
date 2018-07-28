@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Faseyha';
+  font-style: normal;
+  src: url('fonts/faseyha.eot');
+  src: local('Faseyha'), local('Faseyha'),
+    url('fonts/faseyha.eot?#iefix') format('embedded-opentype'),
+    url('fonts/faseyha.woff') format('woff2'),
+    url('fonts/faseyha.ttf') format('ttf'),
+    url('fonts/faseyha.svg#Faseyha') format('svg'),
+}
+
 .dark {
   background: rgb(44, 41, 41);
 }
@@ -7,14 +18,11 @@
 }
 
 .main {
-  /* background: rgb(44, 41, 41); */
   display: flex;
+  position: relative;
   flex-direction: column;
-  align-content: stretch;
+  align-content: center;
   justify-items: center;
-  height: 100vh;
-  margin: 0 auto;
-  /* padding: 15vh 15vw; */
 }
 
 .ui.menu {
@@ -22,6 +30,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  position: relative;
 }
 
 .Home {
@@ -43,14 +52,14 @@
 }
 
 .faq {
-  background: indianred;
-  height: auto;
+  padding: 5vh;
 }
 
 .thaana {
-  /* direction: rtl; */
-  font-size: 4vh;
-  line-height: 1.8em;
+  direction: rtl;
+  font-family: 'Faseyha';
+  font-size: 3vh;
+  line-height: 5vh;
 }
 /* 
 .bottom {
