@@ -1,13 +1,15 @@
 @font-face {
-  font-family: 'Faseyha';
+  font-family: 'A_Faseyha';
   font-style: normal;
-  src: url('fonts/faseyha.eot');
-  src: local('Faseyha'), local('Faseyha'),
-    url('fonts/faseyha.eot?#iefix') format('embedded-opentype'),
-    url('fonts/faseyha.woff') format('woff2'),
-    url('fonts/faseyha.ttf') format('ttf'),
-    url('fonts/faseyha.svg#Faseyha') format('svg'),
+  src: url('fonts/A_Faseyha.eot');
+  src: local('A_Faseyha'), local('A_Faseyha'),
+    url('fonts/A_Faseyha.eot?#iefix') format('embedded-opentype'),
+    url('fonts/A_Faseyha.woff') format('woff2'),
+    url('fonts/A_Faseyha.ttf') format('ttf'),
+    url('fonts/A_Faseyha.svg#A_Faseyha') format('svg'),
 }
+
+
 
 .dark {
   background: rgb(44, 41, 41);
@@ -57,7 +59,7 @@
 
 .thaana {
   direction: rtl;
-  font-family: 'Faseyha';
+  font-family: 'A_Faseyha';
   font-size: 3vh;
   line-height: 5vh;
 }
