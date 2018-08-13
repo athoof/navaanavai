@@ -1,0 +1,68 @@
+[
+  { 
+    "header": "Solidarity",
+    "description": "For example, standing with workers (resort workers, teachers, civil servants, nurses) who go on strike",
+    "color": "red",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Inclusivity",
+    "description": "Ensure participation, deliberation, engagement with the people, people have agency to change their circumstances",
+    "color": "orange",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Fundamental Rights",
+    "description": "Regardless of race, nationality, ethnicity, language, religion, gender, sexuality, disability",
+    "color": "brown",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Equality",
+    "description": "Some text",
+    "color": "olive",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Integrity",
+    "description": "Ensure participation, deliberation, engagement with the people, people have agency to change their circumstances",
+    "color": "blue",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Humility",
+    "description": "Acceptance of mistakes, fallibility (the goals of the party are bigger than any one individual. For eg if you are accused of misconduct must resign); the people over egos.",
+    "color": "violet",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Environmentalism",
+    "description": "Love and respect for nature, recognition that any development on our islands requires attention to protecting the environment",
+    "color": "green",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Collectivism",
+    "description": "The collective over the individual, community welfare as priority Community actions projects designed for each and every island and these projects should be monitored strictly.",
+    "color": "teal",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Liberty",
+    "description": "Capacity to pursue interests and dreams, and live freely.",
+    "color": "purple",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Decentralisation",
+    "description": "Devolution of power, ownership and management of resources from central government",
+    "color": "grey",
+    "image": "http://via.placeholder.com/250x250"
+  },
+  { 
+    "header": "Engagement",
+    "description": "To involve local councils, managements and island committees in development phases and identify the correct and feasible development plans relative to the geography, island concept and needs of the commons.",
+    "color": "red",
+    "image": "http://via.placeholder.com/250x250"
+  }
+]
