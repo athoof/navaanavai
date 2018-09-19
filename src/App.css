@@ -1,14 +1,3 @@
-@font-face {
-  font-family: 'Faseyha';
-  font-style: normal;
-  src: url('fonts/faseyha.eot');
-  src: local('Faseyha'), local('Faseyha'),
-    url('fonts/faseyha.eot?#iefix') format('embedded-opentype'),
-    url('fonts/faseyha.woff') format('woff2'),
-    url('fonts/faseyha.ttf') format('ttf'),
-    url('fonts/faseyha.svg#Faseyha') format('svg'),
-}
-
 .dark {
   background: rgb(44, 41, 41);
 }
