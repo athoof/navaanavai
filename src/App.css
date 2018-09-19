@@ -1,3 +1,8 @@
+@font-face { /* Only .otf thaana font works */
+  font-family: MV_Faseyha;
+  src: url("./fonts/mv_faseyha.otf")
+}
+
 .dark {
   background: rgb(44, 41, 41);
 }
@@ -46,10 +51,29 @@
 
 .thaana {
   direction: rtl;
-  font-family: 'Faseyha';
+  font-family: 'MV_Faseyha' !important;
   font-size: 3vh;
-  line-height: 5vh;
+  line-height: 40px;
 }
+
+/* Semantic-UI overrides */
+.thaana .ui.card>.content>.header,
+.ui.cards>.card>.content>.header {
+  font-family: 'MV_Faseyha' !important;
+  font-weight: normal !important;
+  color: darkred;
+  text-shadow: 0px 2px 4px rgba(33, 33, 33, 0.2);
+  font-size: 2.2rem !important;
+}
+.ui.list .list>.item,
+.ui.list>.item,
+ol.ui.list li,
+ul.ui.list li {
+  line-height: inherit !important;
+  color: rgba(0, 0, 0, .68) !important;
+
+}
+
 /* 
 .bottom {
   position: absolute;
