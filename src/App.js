@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-import { Button, Container, Image, Menu, Responsive, Accordion, Label, List, Message, Card } from 'semantic-ui-react';
+import { Button, Container, Image, Menu, Responsive, Accordion, Label, List, Message, Card, Segment, Header, Grid } from 'semantic-ui-react';
 import './App.css';
 import faqText from './faq.json';
 import logosvg from './navaanavai.svg';
@@ -36,8 +36,39 @@ var socialButtons = () => {
 const Home = () => {
   return(
     <Container className="Home">
-      {logo()}
-      {socialButtons()}
+      <Segment vertical>
+        <Grid celled='internally' columns='equal' stackable>
+          <Grid.Row textAlign='center' style={{padding: '5vh 0'}}>
+            <Grid.Column>
+              <Header as='h3'>Who we are</Header>
+              <p>We are you</p>
+              <Header as='h3'>Who we work for</Header>
+              <p>We work for the ordinary people</p>
+              <Header as='h3'>Who can join us</Header>
+              <p>You can join us</p>
+            </Grid.Column>
+            <Grid.Column>
+              <Header as='h3'>What we do</Header>
+              <p>We do this</p>
+              <Header as='h3'>What we believe</Header>
+              <p>We believe in equality</p>
+              <Header as='h3'>What you can do</Header>
+              <p>We need your voice</p>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
+
+      <Segment style={{padding: '10vh 0em'}} vertical>
+        <Container text textAlign={'center'}>
+          <Header>
+            Use your voice, contribute
+          </Header>
+          <Button as='a' size='large' color={'red'}>
+            Join us
+          </Button>
+        </Container>
+      </Segment>
     </Container>
   );
 }

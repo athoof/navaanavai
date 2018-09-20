@@ -27,6 +27,12 @@
   position: relative;
 }
 
+.infoBox {
+  width: 10vw;
+  max-width: 400px;
+  min-width: 100px;
+}
+
 .Home {
   display: flex;
   align-content: flex-end;
