@@ -8,6 +8,7 @@ import logosvg from './navaanavai.svg';
 
 const menuItems = [
   { key: 'home', name: "Home", href: '#', inverted: true},
+  { key: 'blog', name: "Blog", href: 'blog.navaanavai.org'},
   { key: 'faq', name: "FAQ", href: '#faq' },
 ]
 
